@@ -16,8 +16,8 @@ RUN yum clean all -y
 
 COPY index.html /var/www/html/
 COPY httpd.conf /etc/httpd/conf/
-COPY htpasswd /var/www/html/
-COPY htaccess /var/www/html/ 
+COPY htpasswd /var/www/html/.htpasswd
+COPY htaccess /var/www/html/.htaccess
 COPY ssl.conf /etc/httpd/conf.d/
 RUN mkdir /etc/ssl/private/
 COPY practicadevops.local.key /etc/ssl/private/
